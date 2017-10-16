@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_1rZ_QLJYEee0UMKu8yyP2A" entityName="New Allocation">
+  <targetResourceEnvironment_Allocation href="node.resourceenvironment#/"/>
+  <system_Allocation href="jobs.system#_9GuMMLJWEeeDotutARlDZw"/>
+  <allocationContexts_Allocation id="_SvGJYLKEEee65PCGuY2PJQ" entityName="Allocation_Assembly_CopyDataJob">
+    <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
+    <assemblyContext_AllocationContext href="jobs.system#_j2pVoLKDEee65PCGuY2PJQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_IXs3wLKEEee65PCGuY2PJQ" entityName="Allocation_Assembly_ComputeJob">
+    <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
+    <assemblyContext_AllocationContext href="jobs.system#_h2rpALKDEee65PCGuY2PJQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_VnhIALKEEee65PCGuY2PJQ" entityName="Allocation_Assembly_IOJob">
+    <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
+    <assemblyContext_AllocationContext href="jobs.system#_gsl0cLKDEee65PCGuY2PJQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_-lux8LKEEee65PCGuY2PJQ" entityName="Allocation_Assembly_IOJob">
+    <resourceContainer_AllocationContext href="node.resourceenvironment#_1hysQLKEEee65PCGuY2PJQ"/>
+    <assemblyContext_AllocationContext href="jobs.system#_gsl0cLKDEee65PCGuY2PJQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="__DE1QLKEEee65PCGuY2PJQ" entityName="Allocation_Assembly_ComputeJob">
+    <resourceContainer_AllocationContext href="node.resourceenvironment#_1hysQLKEEee65PCGuY2PJQ"/>
+    <assemblyContext_AllocationContext href="jobs.system#_h2rpALKDEee65PCGuY2PJQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="__qKDYLKEEee65PCGuY2PJQ" entityName="Allocation_Assembly_CopyDataJob">
+    <resourceContainer_AllocationContext href="node.resourceenvironment#_1hysQLKEEee65PCGuY2PJQ"/>
+    <assemblyContext_AllocationContext href="jobs.system#_j2pVoLKDEee65PCGuY2PJQ"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>
