@@ -14,11 +14,4 @@
       <readProcessingRate specification="10000&#xD;&#xA;"/>
     </activeResourceSpecifications_ResourceContainer>
   </resourceContainer_ResourceEnvironment>
-  <resourceContainer_ResourceEnvironment id="_1hysQLKEEee65PCGuY2PJQ" entityName="ResourceContainer2">
-    <activeResourceSpecifications_ResourceContainer id="_7vyfkLKEEee65PCGuY2PJQ">
-      <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
-      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
-      <processingRate_ProcessingResourceSpecification specification="100000&#xD;&#xA;"/>
-    </activeResourceSpecifications_ResourceContainer>
-  </resourceContainer_ResourceEnvironment>
 </resourceenvironment:ResourceEnvironment>

@@ -2,16 +2,16 @@
 <allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_1rZ_QLJYEee0UMKu8yyP2A" entityName="New Allocation">
   <targetResourceEnvironment_Allocation href="node.resourceenvironment#/"/>
   <system_Allocation href="jobs.system#_9GuMMLJWEeeDotutARlDZw"/>
-  <allocationContexts_Allocation id="_trXX4LQLEeecorHFWQY2Ug" entityName="Allocation_Assembly_ComputeJob">
+  <allocationContexts_Allocation id="_9G1GoLdIEee14LRNEew6Zw" entityName="Allocation_Assembly_ComputeJob">
     <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
-    <assemblyContext_AllocationContext href="jobs.system#_nlVNwLQLEeecorHFWQY2Ug"/>
+    <assemblyContext_AllocationContext href="jobs.system#_SmMAoLdIEeeBdYjWM-V5yw"/>
   </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_ufu0ELQLEeecorHFWQY2Ug" entityName="Allocation_Assembly_IOJob">
-    <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
-    <assemblyContext_AllocationContext href="jobs.system#_oAT5kLQLEeecorHFWQY2Ug"/>
-  </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_td48kLQLEeecorHFWQY2Ug" entityName="Allocation_Assembly_CopyDataJob">
+  <allocationContexts_Allocation id="_9xLEILdIEee14LRNEew6Zw" entityName="Allocation_Assembly_CopyDataJob">
     <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
     <assemblyContext_AllocationContext href="jobs.system#_nAXfgLQLEeecorHFWQY2Ug"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_S0nzULdKEee14LRNEew6Zw" entityName="Allocation_Assembly_IOJob">
+    <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
+    <assemblyContext_AllocationContext href="jobs.system#_QvhvELdKEee14LRNEew6Zw"/>
   </allocationContexts_Allocation>
 </allocation:Allocation>
