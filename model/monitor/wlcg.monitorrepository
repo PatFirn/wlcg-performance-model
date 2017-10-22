@@ -7,4 +7,18 @@
     </measurementSpecifications>
     <measuringPoint xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" href="My.measuringpoint#//@measuringPoints.0"/>
   </monitors>
+  <monitors id="_1Dk2ULdSEee-W-zKbZXovQ" entityName="Ressource HDD">
+    <measurementSpecifications id="_seG_4LdTEee-W-zKbZXovQ">
+      <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_eg_F0s7qEeOX_4BzImuHbA"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_tenaoLdTEee-W-zKbZXovQ"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" href="My.measuringpoint#//@measuringPoints.2"/>
+  </monitors>
+  <monitors id="_0-BLcLdTEee-W-zKbZXovQ" entityName="Ressource CPU">
+    <measurementSpecifications id="_8Uu6ULdTEee-W-zKbZXovQ">
+      <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_eg_F0s7qEeOX_4BzImuHbA"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_-HMWcLdTEee-W-zKbZXovQ"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" href="My.measuringpoint#//@measuringPoints.1"/>
+  </monitors>
 </monitorrepository:MonitorRepository>

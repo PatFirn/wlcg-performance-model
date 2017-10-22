@@ -3,4 +3,10 @@
   <measuringPoints xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" stringRepresentation="Usage Scenario: UsageScenario" resourceURIRepresentation="platform:/resource/wlcg/model/wlcg.usagemodel#_OCOm4LJeEee414wI-DE2Cw">
     <usageScenario href="../wlcg.usagemodel#_OCOm4LJeEee414wI-DE2Cw"/>
   </measuringPoints>
+  <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="HDD [0] in node" resourceURIRepresentation="platform:/resource/wlcg/model/node.resourceenvironment#_yycOELJYEee0UMKu8yyP2A">
+    <activeResource href="../node.resourceenvironment#_yycOELJYEee0UMKu8yyP2A"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="CPU [0] in node" resourceURIRepresentation="platform:/resource/wlcg/model/node.resourceenvironment#_wfHgkLJYEee0UMKu8yyP2A">
+    <activeResource href="../node.resourceenvironment#_wfHgkLJYEee0UMKu8yyP2A"/>
+  </measuringPoints>
 </org.palladiosimulator.edp2.models:MeasuringPointRepository>
