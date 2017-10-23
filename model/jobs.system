@@ -1,45 +1,53 @@
 <?xml version="1.0" encoding="ASCII"?>
-<system:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:qos_performance="http://palladiosimulator.org/PalladioComponentModel/QoSAnnotations/QoS_Performance/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" id="_9GuMMLJWEeeDotutARlDZw" entityName="New System">
-  <assemblyContexts__ComposedStructure id="_nAXfgLQLEeecorHFWQY2Ug" entityName="Assembly_CopyDataJob">
-    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="jobs.repository#_Psj7YLJWEeeDotutARlDZw"/>
-  </assemblyContexts__ComposedStructure>
-  <assemblyContexts__ComposedStructure id="_SmMAoLdIEeeBdYjWM-V5yw" entityName="Assembly_ComputeJob">
-    <encapsulatedComponent__AssemblyContext xsi:type="repository:CompositeComponent" href="jobs.repository#_oST9kLdCEeeBdYjWM-V5yw"/>
-  </assemblyContexts__ComposedStructure>
-  <assemblyContexts__ComposedStructure id="_QvhvELdKEee14LRNEew6Zw" entityName="Assembly_IOJob">
-    <encapsulatedComponent__AssemblyContext xsi:type="repository:CompositeComponent" href="jobs.repository#_oh7t8LdCEeeBdYjWM-V5yw"/>
-  </assemblyContexts__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_rikfYLQLEeecorHFWQY2Ug" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_zSz2kLJgEee414wI-DE2Cw" assemblyContext_ProvidedDelegationConnector="_nAXfgLQLEeecorHFWQY2Ug">
-    <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_n_bd0LJgEee414wI-DE2Cw"/>
-  </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_Tu4uELdIEeeBdYjWM-V5yw" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_ua4eULJgEee414wI-DE2Cw" assemblyContext_ProvidedDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
-    <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_5XuUcLdEEeeBdYjWM-V5yw"/>
-  </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_VNtcgLdIEeeBdYjWM-V5yw" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_csCNELJXEee0au_ONIXJww" assemblyContext_RequiredDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
-    <innerRequiredRole_RequiredDelegationConnector href="jobs.repository#_H1bUILdFEeeBdYjWM-V5yw"/>
-  </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_R5VPwLdKEee14LRNEew6Zw" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_TgOgoLJeEee414wI-DE2Cw" assemblyContext_ProvidedDelegationConnector="_QvhvELdKEee14LRNEew6Zw">
-    <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_5tUJ8LdEEeeBdYjWM-V5yw"/>
-  </connectors__ComposedStructure>
-  <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_SOckILdKEee14LRNEew6Zw" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_csCNELJXEee0au_ONIXJww" assemblyContext_RequiredDelegationConnector="_QvhvELdKEee14LRNEew6Zw">
-    <innerRequiredRole_RequiredDelegationConnector href="jobs.repository#_IM6AALdFEeeBdYjWM-V5yw"/>
-  </connectors__ComposedStructure>
-  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_TgOgoLJeEee414wI-DE2Cw" entityName="IOJob">
-    <providedInterface__OperationProvidedRole href="jobs.repository#_SpNSsLJWEeeDotutARlDZw"/>
-  </providedRoles_InterfaceProvidingEntity>
-  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ua4eULJgEee414wI-DE2Cw" entityName="ComputeJob">
-    <providedInterface__OperationProvidedRole href="jobs.repository#_SpNSsLJWEeeDotutARlDZw"/>
-  </providedRoles_InterfaceProvidingEntity>
-  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_zSz2kLJgEee414wI-DE2Cw" entityName="GetDataJob">
-    <providedInterface__OperationProvidedRole href="jobs.repository#_SpNSsLJWEeeDotutARlDZw"/>
-  </providedRoles_InterfaceProvidingEntity>
-  <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_csCNELJXEee0au_ONIXJww" entityName="OperationRequiredRole1">
-    <requiredInterface__OperationRequiredRole href="jobs.repository#_aR6JcLJWEeeDotutARlDZw"/>
-  </requiredRoles_InterfaceRequiringEntity>
-  <qosAnnotations_System id="_dcNs0LJXEee0au_ONIXJww" entityName="QoSAnnotations">
-    <specifiedQoSAnnotations_QoSAnnotations xsi:type="qos_performance:SystemSpecifiedExecutionTime" role_SpecifiedQoSAnnotation="_csCNELJXEee0au_ONIXJww">
-      <signature_SpecifiedQoSAnnation xsi:type="repository:OperationSignature" href="jobs.repository#_b0qVoLJWEeeDotutARlDZw"/>
-      <specification_SpecifiedExecutionTime specification="5"/>
-    </specifiedQoSAnnotations_QoSAnnotations>
-  </qosAnnotations_System>
-</system:System>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1" xmlns:org.palladiosimulator.architecturaltemplates.catalog.profiles="org.palladiosimulator.architecturaltemplates.catalog.profiles.staticresourcecontainerloadbalancing" xmlns:qos_performance="http://palladiosimulator.org/PalladioComponentModel/QoSAnnotations/QoS_Performance/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2">
+  <system:System id="_9GuMMLJWEeeDotutARlDZw" entityName="New System">
+    <assemblyContexts__ComposedStructure id="_nAXfgLQLEeecorHFWQY2Ug" entityName="Assembly_CopyDataJob">
+      <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="jobs.repository#_Psj7YLJWEeeDotutARlDZw"/>
+    </assemblyContexts__ComposedStructure>
+    <assemblyContexts__ComposedStructure id="_SmMAoLdIEeeBdYjWM-V5yw" entityName="Assembly_ComputeJob">
+      <encapsulatedComponent__AssemblyContext xsi:type="repository:CompositeComponent" href="jobs.repository#_oST9kLdCEeeBdYjWM-V5yw"/>
+    </assemblyContexts__ComposedStructure>
+    <assemblyContexts__ComposedStructure id="_QvhvELdKEee14LRNEew6Zw" entityName="Assembly_IOJob">
+      <encapsulatedComponent__AssemblyContext xsi:type="repository:CompositeComponent" href="jobs.repository#_oh7t8LdCEeeBdYjWM-V5yw"/>
+    </assemblyContexts__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_rikfYLQLEeecorHFWQY2Ug" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_zSz2kLJgEee414wI-DE2Cw" assemblyContext_ProvidedDelegationConnector="_nAXfgLQLEeecorHFWQY2Ug">
+      <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_n_bd0LJgEee414wI-DE2Cw"/>
+    </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_Tu4uELdIEeeBdYjWM-V5yw" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_ua4eULJgEee414wI-DE2Cw" assemblyContext_ProvidedDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
+      <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_5XuUcLdEEeeBdYjWM-V5yw"/>
+    </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_VNtcgLdIEeeBdYjWM-V5yw" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_csCNELJXEee0au_ONIXJww" assemblyContext_RequiredDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
+      <innerRequiredRole_RequiredDelegationConnector href="jobs.repository#_H1bUILdFEeeBdYjWM-V5yw"/>
+    </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_R5VPwLdKEee14LRNEew6Zw" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_TgOgoLJeEee414wI-DE2Cw" assemblyContext_ProvidedDelegationConnector="_QvhvELdKEee14LRNEew6Zw">
+      <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_5tUJ8LdEEeeBdYjWM-V5yw"/>
+    </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:RequiredDelegationConnector" id="_SOckILdKEee14LRNEew6Zw" entityName="newRequiredDelegationConnector" outerRequiredRole_RequiredDelegationConnector="_csCNELJXEee0au_ONIXJww" assemblyContext_RequiredDelegationConnector="_QvhvELdKEee14LRNEew6Zw">
+      <innerRequiredRole_RequiredDelegationConnector href="jobs.repository#_IM6AALdFEeeBdYjWM-V5yw"/>
+    </connectors__ComposedStructure>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_TgOgoLJeEee414wI-DE2Cw" entityName="IOJob">
+      <providedInterface__OperationProvidedRole href="jobs.repository#_SpNSsLJWEeeDotutARlDZw"/>
+    </providedRoles_InterfaceProvidingEntity>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ua4eULJgEee414wI-DE2Cw" entityName="ComputeJob">
+      <providedInterface__OperationProvidedRole href="jobs.repository#_SpNSsLJWEeeDotutARlDZw"/>
+    </providedRoles_InterfaceProvidingEntity>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_zSz2kLJgEee414wI-DE2Cw" entityName="GetDataJob">
+      <providedInterface__OperationProvidedRole href="jobs.repository#_SpNSsLJWEeeDotutARlDZw"/>
+    </providedRoles_InterfaceProvidingEntity>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_csCNELJXEee0au_ONIXJww" entityName="OperationRequiredRole1">
+      <requiredInterface__OperationRequiredRole href="jobs.repository#_aR6JcLJWEeeDotutARlDZw"/>
+    </requiredRoles_InterfaceRequiringEntity>
+    <qosAnnotations_System id="_dcNs0LJXEee0au_ONIXJww" entityName="QoSAnnotations">
+      <specifiedQoSAnnotations_QoSAnnotations xsi:type="qos_performance:SystemSpecifiedExecutionTime" role_SpecifiedQoSAnnotation="_csCNELJXEee0au_ONIXJww">
+        <signature_SpecifiedQoSAnnation xsi:type="repository:OperationSignature" href="jobs.repository#_b0qVoLJWEeeDotutARlDZw"/>
+        <specification_SpecifiedExecutionTime specification="5"/>
+      </specifiedQoSAnnotations_QoSAnnotations>
+    </qosAnnotations_System>
+  </system:System>
+  <emfprofileapplication:ProfileApplication>
+    <stereotypeApplications xsi:type="org.palladiosimulator.architecturaltemplates.catalog.profiles:StaticResourceContainerLoadbalancingSystem" appliedTo="_9GuMMLJWEeeDotutARlDZw">
+      <extension href="../../../plugin/org.palladiosimulator.architecturaltemplates.catalog/profiles/StaticResourceContainerLoadbalancing.emfprofile_diagram#_tveRoL0NEeSXc41T9TupKQ"/>
+    </stereotypeApplications>
+    <importedProfiles nsURI="org.palladiosimulator.architecturaltemplates.catalog.profiles.staticresourcecontainerloadbalancing" location="platform:/plugin/org.palladiosimulator.architecturaltemplates.catalog/profiles/StaticResourceContainerLoadbalancing.emfprofile_diagram"/>
+  </emfprofileapplication:ProfileApplication>
+</xmi:XMI>

@@ -21,4 +21,11 @@
     </measurementSpecifications>
     <measuringPoint xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" href="My.measuringpoint#//@measuringPoints.1"/>
   </monitors>
+  <monitors id="_RyW8cLf3EeeWkolGUN97wA" entityName="Number Nodes">
+    <measurementSpecifications id="_VEk7ILf3EeeWkolGUN97wA">
+      <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_e7x3gq-eEeSgL6DrxYuwZg"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_XiB1ALf3EeeWkolGUN97wA"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="pcmmeasuringpoint:ResourceEnvironmentMeasuringPoint" href="My.measuringpoint#//@measuringPoints.3"/>
+  </monitors>
 </monitorrepository:MonitorRepository>
