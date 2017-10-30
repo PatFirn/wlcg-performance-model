@@ -14,4 +14,8 @@
     <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
     <assemblyContext_AllocationContext href="jobs.system#_QvhvELdKEee14LRNEew6Zw"/>
   </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_wat_ELi2EeeUa9cZfEgEAA" entityName="Allocation_Assembly_Data">
+    <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
+    <assemblyContext_AllocationContext href="jobs.system#_oboooLi2EeeUa9cZfEgEAA"/>
+  </allocationContexts_Allocation>
 </allocation:Allocation>

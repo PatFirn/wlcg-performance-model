@@ -14,6 +14,11 @@
         <writeProcessingRate specification="1000"/>
         <readProcessingRate specification="10000&#xD;&#xA;"/>
       </activeResourceSpecifications_ResourceContainer>
+      <activeResourceSpecifications_ResourceContainer id="_uwB_sL1oEeeYlNBLJ3RWsg">
+        <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#Delay"/>
+        <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_nvHX4KkREdyEA_b89s7q9w"/>
+        <processingRate_ProcessingResourceSpecification specification="1&#xD;&#xA;"/>
+      </activeResourceSpecifications_ResourceContainer>
     </resourceContainer_ResourceEnvironment>
   </resourceenvironment:ResourceEnvironment>
   <emfprofileapplication:ProfileApplication>
