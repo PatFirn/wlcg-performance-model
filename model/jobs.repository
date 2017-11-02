@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" id="_ezMYwLJVEeeC_4uZgQew7A" entityName="jobs">
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_ezMYwLJVEeeC_4uZgQew7A" entityName="jobs">
   <components__Repository xsi:type="repository:BasicComponent" id="_Psj7YLJWEeeDotutARlDZw" entityName="CopyDataJob">
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_n_bd0LJgEee414wI-DE2Cw" entityName="OperationProvidedRole1" providedInterface__OperationProvidedRole="_SpNSsLJWEeeDotutARlDZw"/>
     <resourceRequiredRoles__ResourceInterfaceRequiringEntity id="_c8vGILQFEeecorHFWQY2Ug" entityName="ResourceRequiredRole1">
@@ -27,7 +27,7 @@
       <steps_Behaviour xsi:type="seff:StopAction" id="_DeUxArdFEeeBdYjWM-V5yw" predecessor_AbstractAction="_fRmmgLdMEee14LRNEew6Zw"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_c10kwLdFEeeBdYjWM-V5yw" entityName="InternalAction1" predecessor_AbstractAction="_DeUxAbdFEeeBdYjWM-V5yw" successor_AbstractAction="_fRmmgLdMEee14LRNEew6Zw">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="10000"/>
+          <specification_ParametericResourceDemand specification="10000 * payload.VALUE"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
@@ -45,7 +45,7 @@
       <steps_Behaviour xsi:type="seff:StopAction" id="_EFSqYrdFEeeBdYjWM-V5yw" predecessor_AbstractAction="_j7oFoLdMEee14LRNEew6Zw"/>
       <steps_Behaviour xsi:type="seff:InternalAction" id="_heeK4LdFEeeBdYjWM-V5yw" entityName="InternalAction1" predecessor_AbstractAction="_EFSqYbdFEeeBdYjWM-V5yw" successor_AbstractAction="_j7oFoLdMEee14LRNEew6Zw">
         <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="100"/>
+          <specification_ParametericResourceDemand specification="100 * payload.VALUE"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
         <resourceCall__Action id="_hxso4LdFEeeBdYjWM-V5yw" entityName="HddInterface (read)" resourceRequiredRole__ResourceCall="_7URTALQKEeecorHFWQY2Ug">
@@ -76,7 +76,14 @@
           <numberOfCalls__ResourceCall specification="100"/>
         </resourceCall__Action>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_ni8KkLdMEee14LRNEew6Zw" entityName="ExternalCallAction1" predecessor_AbstractAction="_LNFMcLdFEeeBdYjWM-V5yw" successor_AbstractAction="_GY4dobdFEeeBdYjWM-V5yw" calledService_ExternalService="_zN0-ALdEEeeBdYjWM-V5yw" role_ExternalService="_E7JUULdFEeeBdYjWM-V5yw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_ni8KkLdMEee14LRNEew6Zw" entityName="ExternalCallAction1" predecessor_AbstractAction="_LNFMcLdFEeeBdYjWM-V5yw" successor_AbstractAction="_GY4dobdFEeeBdYjWM-V5yw" calledService_ExternalService="_zN0-ALdEEeeBdYjWM-V5yw" role_ExternalService="_E7JUULdFEeeBdYjWM-V5yw">
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="payload.VALUE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="payload"/>
+        </inputVariableUsages__CallAction>
+      </steps_Behaviour>
       <steps_Behaviour xsi:type="seff:BranchAction" id="_TaAHQLjJEeeQGfVdHuT7dA" entityName="BranchAction1" predecessor_AbstractAction="_GY4doLdFEeeBdYjWM-V5yw" successor_AbstractAction="_LNFMcLdFEeeBdYjWM-V5yw">
         <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_WRc1gLjJEeeQGfVdHuT7dA" entityName="ProbabilisticBranchTransition1" branchProbability="0.9">
           <branchBehaviour_BranchTransition id="_WReDoLjJEeeQGfVdHuT7dA">
@@ -146,13 +153,21 @@
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
   <interfaces__Repository xsi:type="repository:OperationInterface" id="_SpNSsLJWEeeDotutARlDZw" entityName="Runable">
-    <signatures__OperationInterface id="_UtoBgLJWEeeDotutARlDZw" entityName="run"/>
+    <signatures__OperationInterface id="_UtoBgLJWEeeDotutARlDZw" entityName="run">
+      <parameters__OperationSignature parameterName="payload">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
   </interfaces__Repository>
   <interfaces__Repository xsi:type="repository:OperationInterface" id="_aR6JcLJWEeeDotutARlDZw" entityName="Data">
     <signatures__OperationInterface id="_b0qVoLJWEeeDotutARlDZw" entityName="getData"/>
   </interfaces__Repository>
   <interfaces__Repository xsi:type="repository:OperationInterface" id="_rEs6wLdEEeeBdYjWM-V5yw" entityName="MiddlePhase">
-    <signatures__OperationInterface id="_zN0-ALdEEeeBdYjWM-V5yw" entityName="process"/>
+    <signatures__OperationInterface id="_zN0-ALdEEeeBdYjWM-V5yw" entityName="process">
+      <parameters__OperationSignature parameterName="payload">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
   </interfaces__Repository>
   <interfaces__Repository xsi:type="repository:OperationInterface" id="_vV1_0LdEEeeBdYjWM-V5yw" entityName="FinalizePhase">
     <signatures__OperationInterface id="_xPuSkLdEEeeBdYjWM-V5yw" entityName="finalize"/>
