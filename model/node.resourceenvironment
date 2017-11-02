@@ -22,7 +22,7 @@
     </resourceContainer_ResourceEnvironment>
   </resourceenvironment:ResourceEnvironment>
   <emfprofileapplication:ProfileApplication>
-    <stereotypeApplications xsi:type="org.palladiosimulator.architecturaltemplates.catalog.profiles:StaticLoadbalancedResourceContainer" appliedTo="_tRqGELJYEee0UMKu8yyP2A" numberOfReplicas="100">
+    <stereotypeApplications xsi:type="org.palladiosimulator.architecturaltemplates.catalog.profiles:StaticLoadbalancedResourceContainer" appliedTo="_tRqGELJYEee0UMKu8yyP2A" numberOfReplicas="1000">
       <extension href="../../../plugin/org.palladiosimulator.architecturaltemplates.catalog/profiles/StaticResourceContainerLoadbalancing.emfprofile_diagram#_58BuEL0NEeSXc41T9TupKQ"/>
     </stereotypeApplications>
     <importedProfiles nsURI="org.palladiosimulator.architecturaltemplates.catalog.profiles.staticresourcecontainerloadbalancing" location="platform:/plugin/org.palladiosimulator.architecturaltemplates.catalog/profiles/StaticResourceContainerLoadbalancing.emfprofile_diagram"/>
