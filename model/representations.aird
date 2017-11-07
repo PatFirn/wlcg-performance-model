@@ -7773,7 +7773,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_kgaR4LdFEeeBdYjWM-V5yw" name="100 &lt;CPU>">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_kgaR4LdFEeeBdYjWM-V5yw" name="100 * payload.VALUE &lt;CPU>">
           <target xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <semanticElements xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.2/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_kgaR4bdFEeeBdYjWM-V5yw" labelPosition="node">
@@ -7806,7 +7806,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceCall%20Container']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceCall%20Container']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_i69XALdFEeeBdYjWM-V5yw" name="HddInterface (read):10000">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_i69XALdFEeeBdYjWM-V5yw" name="HddInterface (read):10000 * payload.VALUE">
           <target xmi:type="seff_performance:ResourceCall" href="jobs.repository#_hxso4LdFEeeBdYjWM-V5yw"/>
           <semanticElements xmi:type="seff_performance:ResourceCall" href="jobs.repository#_hxso4LdFEeeBdYjWM-V5yw"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_i69XAbdFEeeBdYjWM-V5yw" labelPosition="node">

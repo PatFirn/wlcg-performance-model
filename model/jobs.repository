@@ -50,7 +50,7 @@
         </resourceDemand_Action>
         <resourceCall__Action id="_hxso4LdFEeeBdYjWM-V5yw" entityName="HddInterface (read)" resourceRequiredRole__ResourceCall="_7URTALQKEeecorHFWQY2Ug">
           <signature__ResourceCall href="pathmap://PCM_MODELS/Palladio.resourcetype#_ygMyEE5CEeCUKeckjJ_n-w"/>
-          <numberOfCalls__ResourceCall specification="10000"/>
+          <numberOfCalls__ResourceCall specification="10000 * payload.VALUE"/>
         </resourceCall__Action>
       </steps_Behaviour>
       <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_j7oFoLdMEee14LRNEew6Zw" entityName="ExternalCallAction1" predecessor_AbstractAction="_heeK4LdFEeeBdYjWM-V5yw" successor_AbstractAction="_EFSqYrdFEeeBdYjWM-V5yw" calledService_ExternalService="_xPuSkLdEEeeBdYjWM-V5yw" role_ExternalService="_CyK1oLdFEeeBdYjWM-V5yw"/>
@@ -152,7 +152,7 @@
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_SpNSsLJWEeeDotutARlDZw" entityName="Runable">
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_SpNSsLJWEeeDotutARlDZw" entityName="Runnable">
     <signatures__OperationInterface id="_UtoBgLJWEeeDotutARlDZw" entityName="run">
       <parameters__OperationSignature parameterName="payload">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
