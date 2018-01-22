@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1" xmlns:org.palladiosimulator.architecturaltemplates.catalog.profiles="org.palladiosimulator.architecturaltemplates.catalog.profiles.staticresourcecontainerloadbalancing" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2">
   <resourceenvironment:ResourceEnvironment entityName="New ResourceEnvironment">
     <resourceContainer_ResourceEnvironment id="_tRqGELJYEee0UMKu8yyP2A" entityName="gridka_working_node">
-      <activeResourceSpecifications_ResourceContainer id="_wfHgkLJYEee0UMKu8yyP2A" numberOfReplicas="27">
+      <activeResourceSpecifications_ResourceContainer id="_wfHgkLJYEee0UMKu8yyP2A" numberOfReplicas="19">
         <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
         <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         <processingRate_ProcessingResourceSpecification specification="335"/>
