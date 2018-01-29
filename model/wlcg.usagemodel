@@ -37,22 +37,6 @@
             </actions_ScenarioBehaviour>
           </branchedBehaviour_BranchTransition>
         </branchTransitions_Branch>
-        <branchTransitions_Branch branchProbability="0.2">
-          <branchedBehaviour_BranchTransition id="_8k2psLJgEee414wI-DE2Cw">
-            <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_8k2psbJgEee414wI-DE2Cw" successor="_cc9qwLJhEee414wI-DE2Cw"/>
-            <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_8k2psrJgEee414wI-DE2Cw" predecessor="_cc9qwLJhEee414wI-DE2Cw"/>
-            <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_cc9qwLJhEee414wI-DE2Cw" entityName="EntryLevelSystemCall1" successor="_8k2psrJgEee414wI-DE2Cw" predecessor="_8k2psbJgEee414wI-DE2Cw">
-              <providedRole_EntryLevelSystemCall href="jobs.system#_zSz2kLJgEee414wI-DE2Cw"/>
-              <operationSignature__EntryLevelSystemCall href="jobs.repository#_UtoBgLJWEeeDotutARlDZw"/>
-              <inputParameterUsages_EntryLevelSystemCall>
-                <variableCharacterisation_VariableUsage type="VALUE">
-                  <specification_VariableCharacterisation specification="IntPMF[(27; 0.1)(28; 0.2)(29; 0.6)(30; 0.1)]"/>
-                </variableCharacterisation_VariableUsage>
-                <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="payload"/>
-              </inputParameterUsages_EntryLevelSystemCall>
-            </actions_ScenarioBehaviour>
-          </branchedBehaviour_BranchTransition>
-        </branchTransitions_Branch>
       </actions_ScenarioBehaviour>
     </scenarioBehaviour_UsageScenario>
     <workload_UsageScenario xsi:type="usagemodel:OpenWorkload">

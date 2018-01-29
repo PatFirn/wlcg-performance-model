@@ -6,16 +6,12 @@
     <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
     <assemblyContext_AllocationContext href="jobs.system#_SmMAoLdIEeeBdYjWM-V5yw"/>
   </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_9xLEILdIEee14LRNEew6Zw" entityName="Allocation_Assembly_CopyDataJob">
+  <allocationContexts_Allocation id="_wat_ELi2EeeUa9cZfEgEAA" entityName="Allocation_Assembly_Data">
     <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
-    <assemblyContext_AllocationContext href="jobs.system#_nAXfgLQLEeecorHFWQY2Ug"/>
+    <assemblyContext_AllocationContext href="jobs.system#_oboooLi2EeeUa9cZfEgEAA"/>
   </allocationContexts_Allocation>
   <allocationContexts_Allocation id="_S0nzULdKEee14LRNEew6Zw" entityName="Allocation_Assembly_IOJob">
     <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
     <assemblyContext_AllocationContext href="jobs.system#_QvhvELdKEee14LRNEew6Zw"/>
-  </allocationContexts_Allocation>
-  <allocationContexts_Allocation id="_wat_ELi2EeeUa9cZfEgEAA" entityName="Allocation_Assembly_Data">
-    <resourceContainer_AllocationContext href="node.resourceenvironment#_tRqGELJYEee0UMKu8yyP2A"/>
-    <assemblyContext_AllocationContext href="jobs.system#_oboooLi2EeeUa9cZfEgEAA"/>
   </allocationContexts_Allocation>
 </allocation:Allocation>

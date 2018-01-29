@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
-<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_ezMYwLJVEeeC_4uZgQew7A" entityName="jobs">
-  <components__Repository xsi:type="repository:BasicComponent" id="_Psj7YLJWEeeDotutARlDZw" entityName="CopyDataJob">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_n_bd0LJgEee414wI-DE2Cw" entityName="OperationProvidedRole1" providedInterface__OperationProvidedRole="_SpNSsLJWEeeDotutARlDZw"/>
-    <resourceRequiredRoles__ResourceInterfaceRequiringEntity id="_c8vGILQFEeecorHFWQY2Ug" entityName="ResourceRequiredRole1">
-      <requiredResourceInterface__ResourceRequiredRole href="pathmap://PCM_MODELS/Palladio.resourcetype#_xXv8QE5CEeCUKeckjJ_n-w"/>
-    </resourceRequiredRoles__ResourceInterfaceRequiringEntity>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_GYhRQLJjEee65PCGuY2PJQ" describedService__SEFF="_UtoBgLJWEeeDotutARlDZw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_GvTZkLJjEee65PCGuY2PJQ" successor_AbstractAction="_Li0y8LJjEee65PCGuY2PJQ"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_GvUAoLJjEee65PCGuY2PJQ" predecessor_AbstractAction="_Li0y8LJjEee65PCGuY2PJQ"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_Li0y8LJjEee65PCGuY2PJQ" entityName="InternalAction1" predecessor_AbstractAction="_GvTZkLJjEee65PCGuY2PJQ" successor_AbstractAction="_GvUAoLJjEee65PCGuY2PJQ">
-        <resourceCall__Action id="_rF6mQLdFEeeBdYjWM-V5yw" entityName="HddInterface (read)" resourceRequiredRole__ResourceCall="_c8vGILQFEeecorHFWQY2Ug">
-          <signature__ResourceCall href="pathmap://PCM_MODELS/Palladio.resourcetype#_ygMyEE5CEeCUKeckjJ_n-w"/>
-          <numberOfCalls__ResourceCall specification="10000"/>
-        </resourceCall__Action>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" id="_ezMYwLJVEeeC_4uZgQew7A" entityName="jobs">
+  <components__Repository xsi:type="repository:BasicComponent" id="_h09sELi1EeeUa9cZfEgEAA" entityName="Data">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_S3QhMLi2EeeUa9cZfEgEAA" entityName="OperationProvidedRole1" providedInterface__OperationProvidedRole="_aR6JcLJWEeeDotutARlDZw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_S4bl4Li2EeeUa9cZfEgEAA" describedService__SEFF="_b0qVoLJWEeeDotutARlDZw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_S4bl4bi2EeeUa9cZfEgEAA" successor_AbstractAction="_X5g6ILi2EeeUa9cZfEgEAA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_S4bl4ri2EeeUa9cZfEgEAA" predecessor_AbstractAction="_X5g6ILi2EeeUa9cZfEgEAA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_X5g6ILi2EeeUa9cZfEgEAA" entityName="InternalAction1" predecessor_AbstractAction="_S4bl4bi2EeeUa9cZfEgEAA" successor_AbstractAction="_S4bl4ri2EeeUa9cZfEgEAA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="1000"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_nvHX4KkREdyEA_b89s7q9w"/>
+        </resourceDemand_Action>
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
@@ -64,9 +61,9 @@
     <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_E7JUULdFEeeBdYjWM-V5yw" entityName="OperationRequiredRole1" requiredInterface__OperationRequiredRole="_rEs6wLdEEeeBdYjWM-V5yw"/>
     <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_HdKlILdFEeeBdYjWM-V5yw" entityName="OperationRequiredRole2" requiredInterface__OperationRequiredRole="_aR6JcLJWEeeDotutARlDZw"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_GY32kbdFEeeBdYjWM-V5yw" describedService__SEFF="_UtoBgLJWEeeDotutARlDZw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_GY4doLdFEeeBdYjWM-V5yw" successor_AbstractAction="_TaAHQLjJEeeQGfVdHuT7dA"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_GY4dobdFEeeBdYjWM-V5yw" predecessor_AbstractAction="_ni8KkLdMEee14LRNEew6Zw"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_LNFMcLdFEeeBdYjWM-V5yw" entityName="InternalAction1" predecessor_AbstractAction="_TaAHQLjJEeeQGfVdHuT7dA" successor_AbstractAction="_ni8KkLdMEee14LRNEew6Zw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_GY4doLdFEeeBdYjWM-V5yw" successor_AbstractAction="_LNFMcLdFEeeBdYjWM-V5yw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_GY4dobdFEeeBdYjWM-V5yw" predecessor_AbstractAction="_LNFMcLdFEeeBdYjWM-V5yw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_LNFMcLdFEeeBdYjWM-V5yw" entityName="InternalAction1" predecessor_AbstractAction="_GY4doLdFEeeBdYjWM-V5yw" successor_AbstractAction="_GY4dobdFEeeBdYjWM-V5yw">
         <resourceDemand_Action>
           <specification_ParametericResourceDemand specification="100"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
@@ -75,29 +72,6 @@
           <signature__ResourceCall href="pathmap://PCM_MODELS/Palladio.resourcetype#_ygMyEE5CEeCUKeckjJ_n-w"/>
           <numberOfCalls__ResourceCall specification="100"/>
         </resourceCall__Action>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_ni8KkLdMEee14LRNEew6Zw" entityName="ExternalCallAction1" predecessor_AbstractAction="_LNFMcLdFEeeBdYjWM-V5yw" successor_AbstractAction="_GY4dobdFEeeBdYjWM-V5yw" calledService_ExternalService="_zN0-ALdEEeeBdYjWM-V5yw" role_ExternalService="_E7JUULdFEeeBdYjWM-V5yw">
-        <inputVariableUsages__CallAction>
-          <variableCharacterisation_VariableUsage type="VALUE">
-            <specification_VariableCharacterisation specification="payload.VALUE"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="payload"/>
-        </inputVariableUsages__CallAction>
-      </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_TaAHQLjJEeeQGfVdHuT7dA" entityName="BranchAction1" predecessor_AbstractAction="_GY4doLdFEeeBdYjWM-V5yw" successor_AbstractAction="_LNFMcLdFEeeBdYjWM-V5yw">
-        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_WRc1gLjJEeeQGfVdHuT7dA" entityName="ProbabilisticBranchTransition1" branchProbability="0.9">
-          <branchBehaviour_BranchTransition id="_WReDoLjJEeeQGfVdHuT7dA">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_WReqsLjJEeeQGfVdHuT7dA" successor_AbstractAction="_WReqsbjJEeeQGfVdHuT7dA"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_WReqsbjJEeeQGfVdHuT7dA" predecessor_AbstractAction="_WReqsLjJEeeQGfVdHuT7dA"/>
-          </branchBehaviour_BranchTransition>
-        </branches_Branch>
-        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_YfpLYLjJEeeQGfVdHuT7dA" entityName="ProbabilisticBranchTransition2" branchProbability="0.1">
-          <branchBehaviour_BranchTransition id="_YfpLYbjJEeeQGfVdHuT7dA">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_YfpLYrjJEeeQGfVdHuT7dA" successor_AbstractAction="_dEdaYLjJEeeQGfVdHuT7dA"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_YfpLY7jJEeeQGfVdHuT7dA" predecessor_AbstractAction="_dEdaYLjJEeeQGfVdHuT7dA"/>
-            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_dEdaYLjJEeeQGfVdHuT7dA" entityName="ExternalCallAction2" predecessor_AbstractAction="_YfpLYrjJEeeQGfVdHuT7dA" successor_AbstractAction="_YfpLY7jJEeeQGfVdHuT7dA" calledService_ExternalService="_b0qVoLJWEeeDotutARlDZw" role_ExternalService="_HdKlILdFEeeBdYjWM-V5yw"/>
-          </branchBehaviour_BranchTransition>
-        </branches_Branch>
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
@@ -136,19 +110,6 @@
           <signature__ResourceCall href="pathmap://PCM_MODELS/Palladio.resourcetype#_zUFtIE5CEeCUKeckjJ_n-w"/>
           <numberOfCalls__ResourceCall specification="1000"/>
         </resourceCall__Action>
-      </steps_Behaviour>
-    </serviceEffectSpecifications__BasicComponent>
-  </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_h09sELi1EeeUa9cZfEgEAA" entityName="Data">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_S3QhMLi2EeeUa9cZfEgEAA" entityName="OperationProvidedRole1" providedInterface__OperationProvidedRole="_aR6JcLJWEeeDotutARlDZw"/>
-    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_S4bl4Li2EeeUa9cZfEgEAA" describedService__SEFF="_b0qVoLJWEeeDotutARlDZw">
-      <steps_Behaviour xsi:type="seff:StartAction" id="_S4bl4bi2EeeUa9cZfEgEAA" successor_AbstractAction="_X5g6ILi2EeeUa9cZfEgEAA"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_S4bl4ri2EeeUa9cZfEgEAA" predecessor_AbstractAction="_X5g6ILi2EeeUa9cZfEgEAA"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_X5g6ILi2EeeUa9cZfEgEAA" entityName="InternalAction1" predecessor_AbstractAction="_S4bl4bi2EeeUa9cZfEgEAA" successor_AbstractAction="_S4bl4ri2EeeUa9cZfEgEAA">
-        <resourceDemand_Action>
-          <specification_ParametericResourceDemand specification="1000"/>
-          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_nvHX4KkREdyEA_b89s7q9w"/>
-        </resourceDemand_Action>
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>

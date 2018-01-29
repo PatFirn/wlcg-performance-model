@@ -3,10 +3,10 @@
   <measuringPoints xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" stringRepresentation="Usage Scenario: UsageScenario" resourceURIRepresentation="platform:/resource/pdf/model/wlcg.usagemodel#_OCOm4LJeEee414wI-DE2Cw">
     <usageScenario href="../wlcg.usagemodel#_OCOm4LJeEee414wI-DE2Cw"/>
   </measuringPoints>
-  <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="HDD [0] in slave" resourceURIRepresentation="platform:/resource/pdf/model/node.resourceenvironment#_yycOELJYEee0UMKu8yyP2A">
+  <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="HDD [0] in gridka_working_node" resourceURIRepresentation="platform:/resource/pdf/model/node.resourceenvironment#_yycOELJYEee0UMKu8yyP2A">
     <activeResource href="../node.resourceenvironment#_yycOELJYEee0UMKu8yyP2A"/>
   </measuringPoints>
-  <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="CPU [0] in slave" resourceURIRepresentation="platform:/resource/pdf/model/node.resourceenvironment#_wfHgkLJYEee0UMKu8yyP2A">
+  <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="CPU [0] in gridka_working_node" resourceURIRepresentation="platform:/resource/pdf/model/node.resourceenvironment#_wfHgkLJYEee0UMKu8yyP2A">
     <activeResource href="../node.resourceenvironment#_wfHgkLJYEee0UMKu8yyP2A"/>
   </measuringPoints>
   <measuringPoints xsi:type="pcmmeasuringpoint:ResourceEnvironmentMeasuringPoint" stringRepresentation="Resource Environment: New ResourceEnvironment" resourceURIRepresentation="platform:/resource/pdf/model/node.resourceenvironment#/0">
