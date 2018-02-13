@@ -7,7 +7,7 @@
       <datasource xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:MemoryDatasource"/>
     </toolConfiguration>
     <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:MeasurementCountStopCondition" measurementCount="-1"/>
-    <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition" simulationTime="190"/>
+    <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition" simulationTime="20000"/>
     <experimentDesign xsi:type="ExperimentAutomation.Experiments:FullFactorialDesign"/>
     <responseMeasurement xsi:type="ExperimentAutomation.Experiments:SimulationDurationMeasurement"/>
     <initialModel>
@@ -16,6 +16,8 @@
       <middlewareRepository href="pathmap://PCM_MODELS/Glassfish.repository#_yQk9oIX1EdyWta7nHuXiHQ"/>
       <eventMiddleWareRepository href="pathmap://PCM_MODELS/default_event_middleware.repository#_Onc7cMALEd-LKvNtxXAQbQ"/>
       <monitorRepository href="monitor/wlcg.monitorrepository#_ChHrQLcsEeeBdYjWM-V5yw"/>
+      <system href="jobs.system#_9GuMMLJWEeeDotutARlDZw"/>
+      <resourceEnvironment href="node.resourceenvironment#/0"/>
     </initialModel>
   </experiments>
 </ExperimentAutomation.Experiments:ExperimentRepository>

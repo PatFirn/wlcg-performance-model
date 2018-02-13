@@ -10,14 +10,9 @@
       <activeResourceSpecifications_ResourceContainer xsi:type="resourceenvironment:HDDProcessingResourceSpecification" id="_yycOELJYEee0UMKu8yyP2A">
         <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#FCFS"/>
         <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_BIjHoQ3KEdyouMqirZIhzQ"/>
-        <processingRate_ProcessingResourceSpecification specification="1"/>
+        <processingRate_ProcessingResourceSpecification specification="5733"/>
         <writeProcessingRate specification="5733"/>
         <readProcessingRate specification="5733"/>
-      </activeResourceSpecifications_ResourceContainer>
-      <activeResourceSpecifications_ResourceContainer id="_uwB_sL1oEeeYlNBLJ3RWsg">
-        <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#Delay"/>
-        <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_nvHX4KkREdyEA_b89s7q9w"/>
-        <processingRate_ProcessingResourceSpecification specification="1&#xD;&#xA;"/>
       </activeResourceSpecifications_ResourceContainer>
     </resourceContainer_ResourceEnvironment>
   </resourceenvironment:ResourceEnvironment>
