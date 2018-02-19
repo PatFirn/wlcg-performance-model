@@ -186,8 +186,8 @@ for(i in levels(jobData$Type)) {
   
   # Remove outliers with large interarrival time
   # Todo: How to avoid this? Removing outliers might skew data (as with very large interarrival times)
-  jobsOfType <- subset(jobsOfType,
-    jobsOfType$timeDiff < as.numeric(quantile(jobsOfType$timeDiff, c(0.99), na.rm = TRUE)))
+  # jobsOfType <- subset(jobsOfType,
+  #   jobsOfType$timeDiff < as.numeric(quantile(jobsOfType$timeDiff, c(0.99), na.rm = TRUE)))
 
   interarrivalPlot <- ggplot(jobsOfType, aes(x = jobsOfType$timeDiff)) + geom_histogram(bins = 100) +
     ggtitle(paste0("Interarrival times for jobs of type: ", i))
