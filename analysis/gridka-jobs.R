@@ -2,6 +2,18 @@ library(anytime) # Date and Time conversion
 library(ggplot2) # More advanced plots
 library(xts) # Time Series
 
+## Get a stochastic expression from the supplied histogram
+#
+distToStoEx <- function(x, bins = 100) {
+  x <- na.omit(x) # Remove NAs from data
+  breaks <- seq(0, max(x), max(x) / bins) # Used breaks
+
+  histogram <- hist(x, breaks, plot = FALSE)
+
+  result <- paste0(mapply(function(x, y) paste("(", x, ",", y, ")", sep = ""), histogram$breaks[-1], histogram$counts), collapse = "")
+  return(paste0("DoublePDF[", result, "]"))
+}
+
 # For now, generate numbered pdf files
 # pdf(file = "plots/plot%03d_generated.pdf", onefile = FALSE)
 
