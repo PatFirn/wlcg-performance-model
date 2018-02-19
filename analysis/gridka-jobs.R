@@ -41,7 +41,11 @@ jobs$FinishedDatetime <- anytime(jobs$FinishedTimeStamp / 1000, asUTC=TRUE)
 nodes$HSScorePerJobSlot <- nodes$hs06 / nodes$jobslots
 
 
+library(dplyr)
+nodeTypes <- aggregate(nodes$hostname, list(CPU = nodes$cpu.model, jobslots = nodes$jobslots, hs06 = nodes$hs06, cores = nodes$cores, scorePerSlot = nodes$HSScorePerJobSlot), length)
 
+print("GridKa Site Machine Types:")
+print(nodeTypes)
 
 ## Merge job assignments with nodes
 
