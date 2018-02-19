@@ -29,6 +29,8 @@ jobs$FinishedDatetime <- anytime(jobs$FinishedTimeStamp / 1000, asUTC=TRUE)
 nodes$HSScorePerJobSlot <- nodes$hs06 / nodes$jobslots
 
 
+
+
 ## Merge job assignments with nodes
 
 # all: Keep unmatched entries
@@ -119,16 +121,30 @@ for(i in levels(jobData$Type)) {
 #   (plotCPUIO <- ggplot(jobsOfType, aes(x = CPUDemand, y = estimatedIOTime)) + geom_point(alpha = 1/2) +
 #      facet_wrap(~Type, ncol = 4))
 #   print(plotCPUIO)
-#   
+# 
 # }
 # 
 # dev.off()
 
+## Job Summary
+
+# jobSummary <- tapply(jobData, jobData$Type, summary)
+library(data.table)
+jobSummaryTable <- data.table(jobData)
+jobSummary <- jobSummaryTable[, list(count = .N,
+                                     WallTime.mean = mean(WrapWC, na.rm = TRUE),
+                                     CPUDemand.mean = mean(CPUDemand, na.rm = TRUE), 
+                                     CPUDemand.sd = sd(CPUDemand, na.rm = TRUE),
+                                     estimatedIOTime.mean = mean(estimatedIOTime, na.rm = TRUE),
+                                     estimatedIOTime.sd = sd(estimatedIOTime, na.rm = TRUE)), by = Type]
+setkey(jobSummary, Type)
+
+print("Job Summary by Type:")
+print(jobSummary)
+
 
 # Analyze job arrivals
-# This is the time the jobs were started, not their arrival time
-
-hist(jobData$StartedRunningDatetime, breaks="days")
+# This is the time the jobs were started, not their initial arrival time!
 
 dailyJobs <- aggregate(jobData$StartedRunningDatetime, by=
                          list(date = as.Date(jobData$StartedRunningDatetime), 
@@ -138,6 +154,10 @@ colnames(dailyJobs) <- c("date", "type", "count")
 
 ggplot(dailyJobs, aes(x = date, y = count, fill = type)) + geom_bar(stat = "identity") +
   ggtitle("Number of Started Jobs per Day")
+
+## Calculate interarrival times for each type of job
+
+interArrTimes <- c()
 
 for(i in levels(jobData$Type)) {
   jobsOfType <- subset(jobData, Type == i)
@@ -151,30 +171,19 @@ for(i in levels(jobData$Type)) {
   # Remove outliers with large interarrival time
   # Todo: How to avoid this? Removing outliers might skew data (as with very large interarrival times)
   jobsOfType <- subset(jobsOfType,
-    jobsOfType$timeDiff < as.numeric(quantile(jobsOfType$timeDiff, c(0.995), na.rm = TRUE)))
+    jobsOfType$timeDiff < as.numeric(quantile(jobsOfType$timeDiff, c(0.99), na.rm = TRUE)))
 
   interarrivalPlot <- ggplot(jobsOfType, aes(x = jobsOfType$timeDiff)) + geom_histogram(bins = 100) +
     ggtitle(paste0("Interarrival times for jobs of type: ", i))
   
   print(interarrivalPlot)
+  
+  interArrTimes <- rbind(interArrTimes, list(i, mean(jobsOfType$timeDiff), sd(jobsOfType$timeDiff)))
 }
 
-
-## Job Summary
-
-# jobSummary <- tapply(jobData, jobData$Type, summary)
-library(data.table)
-jobSummaryTable <- data.table(jobData)
-jobSummary <- jobSummaryTable[, list(count = .N,
-                                     WallTime.mean = mean(WrapWC, na.rm = TRUE),
-                                     CPUDemand.mean = mean(CPUDemand, na.rm = TRUE), 
-                                     CPUDemand.sd = sd(CPUDemand, na.rm = TRUE),
-                                     estimatedIOTime.mean = mean(estimatedIOTime, na.rm = TRUE),
-                                     estimatedIOTime.sd = sd(estimatedIOTime, na.rm = TRUE)), by = Type]
-
-print("Job Summary by Type:")
-print(jobSummary)
-
+colnames(interArrTimes) <- c("Type", "interArrTime.mean", "interArrTime.sd")
+print("Interarrival times (only calculated between jobs of specified type):")
+interArrTimes
 
 # Create a time series for the following analyses
 # reprocessingJobs <- subset(jobData, Type == "reprocessing")
