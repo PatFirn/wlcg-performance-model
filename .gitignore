@@ -1,1 +1,6 @@
-*.Rhistory
+# R and RStudio user related files
+.Rhistory
+
+.Rproj.user
+.RData
+.Ruserdata
