@@ -5,14 +5,14 @@
       <activeResourceSpecifications_ResourceContainer id="_wfHgkLJYEee0UMKu8yyP2A" numberOfReplicas="19">
         <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
         <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
-        <processingRate_ProcessingResourceSpecification specification="335"/>
+        <processingRate_ProcessingResourceSpecification specification="DoublePMF[(88.0; 0.00076)(132.3; 0.00077)(160.0; 0.00077)(193.4; 0.08894)(261.0; 0.17479)(282.7; 0.0495)(305.0; 0.00464)(326.9; 0.00309)(327.6; 0.06806)(329.9; 0.0263)(333.1; 0.03094)(352.3; 0.05104)(374.1; 0.00155)(390.0; 0.46404)(415.6; 0.03094)(430.4; 0.00155)(446.8; 0.00155)(499.2; 0.00077)]"/>
       </activeResourceSpecifications_ResourceContainer>
       <activeResourceSpecifications_ResourceContainer xsi:type="resourceenvironment:HDDProcessingResourceSpecification" id="_yycOELJYEee0UMKu8yyP2A">
         <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#FCFS"/>
         <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_BIjHoQ3KEdyouMqirZIhzQ"/>
-        <processingRate_ProcessingResourceSpecification specification="5733"/>
-        <writeProcessingRate specification="5733"/>
-        <readProcessingRate specification="5733"/>
+        <processingRate_ProcessingResourceSpecification specification="DoublePMF[(10000.0; 0.52591)(1000.0; 0.47409)]"/>
+        <writeProcessingRate specification="DoublePMF[(10000.0; 0.52591)(1000.0; 0.47409)]"/>
+        <readProcessingRate specification="DoublePMF[(10000.0; 0.52591)(1000.0; 0.47409)]"/>
       </activeResourceSpecifications_ResourceContainer>
     </resourceContainer_ResourceEnvironment>
   </resourceenvironment:ResourceEnvironment>
