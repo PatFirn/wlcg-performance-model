@@ -1,17 +1,51 @@
 library(anytime) # Date and Time conversion
 library(ggplot2) # More advanced plots
 library(xts) # Time Series
+library(dplyr)
 
 ## Get a stochastic expression from the supplied histogram
-#
-distToStoEx <- function(x, bins = 100) {
+# This ignores all NA values in the data
+# To handle long-tailed distributions, a tail cutoff can be specified, all values right of that value are put into a single bin
+
+# x: A vector with the distribution to be converted into a stochastic expression, assumed to be positive
+# bins: The total number of bins (excluding cutoff bin)
+# cutoffQuantile: The quantile the distribution is cut off. All values right of this value are put into an overflow bin such that their mean value is the middle of the cutoff bin
+
+distToStoEx <- function(x, bins = 100, cutoffQuantile = 1) {
   x <- na.omit(x) # Remove NAs from data
-  breaks <- seq(0, max(x), max(x) / bins) # Used breaks
+  
+  # Create cutoff mark and filter values to be cut off
+  cutoffBreak <- quantile(x, cutoffQuantile)
+  cutoffValues <- x[x >= cutoffBreak]
+  
+  # Compute right limit of cutoff bin to preserve mean of cutoff values
+  cutoffMiddle <- mean(cutoffValues)
+  cutoffMax <- cutoffBreak + 2 * (cutoffMiddle - cutoffBreak)
+  
+  # Used breaks, +1 for cutoff values
+  breaks <- c(seq(0, cutoffBreak, cutoffBreak / bins), cutoffMax)
+  
+  # Round bins to next integer, remove duplicates
+  # Note: Not quite sure this is valid, but avoids empty bucket due to second precision
+  breaks <- unique(sapply(breaks, ceiling))
 
-  histogram <- hist(x, breaks, plot = FALSE)
+  # Generate histogram
+  # Pull values that are out of bounds into the middle of the overflow bin
+  # This avoids not counting extreme values outside of the computed overflow bin limits
+  histogram <- hist(pmin(x, cutoffMiddle), breaks, plot = T)
+  
+  # Transform counts in histogram to probability
+  histogram$probabilities <- histogram$counts / sum(histogram$counts)
 
-  result <- paste0(mapply(function(x, y) paste("(", x, ",", y, ")", sep = ""), histogram$breaks[-1], histogram$counts), collapse = "")
+  # Create expressions of the form "(binRight,probability)" for all bins
+  # (as specified by Stochastic Expressions definition).
+  # Then join them all together.
+  result <- paste0(mapply(function(x, y) paste("(", x, ";", y, ")", sep = ""),
+                          histogram$breaks[-1], histogram$probabilities),
+                   collapse = "")
   return(paste0("DoublePDF[", result, "]"))
+  
+  # Todo Remove expressions for (consecutive) empty bins to improve efficiency. The rightmost empty bin has to be kept as per the specification of Stochastic Expressions (specifies right limit and probability for each bin).
 }
 
 # For now, generate numbered pdf files
@@ -120,6 +154,10 @@ for(i in levels(jobData$Type)) {
   
   print(jobPlot)
   
+  ## Create stochastic expression for interarrival time
+  stoEx <- distToStoEx(jobsOfType$CPUDemand)
+  print(paste0("StoEx for CPUDemand of job type: ", i))
+  print(stoEx)
   
 }
 
@@ -186,15 +224,20 @@ for(i in levels(jobData$Type)) {
   
   # Remove outliers with large interarrival time
   # Todo: How to avoid this? Removing outliers might skew data (as with very large interarrival times)
-  # jobsOfType <- subset(jobsOfType,
-  #   jobsOfType$timeDiff < as.numeric(quantile(jobsOfType$timeDiff, c(0.99), na.rm = TRUE)))
+  jobsOfTypeCutoff <- subset(jobsOfType,
+    jobsOfType$timeDiff < as.numeric(quantile(jobsOfType$timeDiff, c(0.95), na.rm = TRUE)))
 
-  interarrivalPlot <- ggplot(jobsOfType, aes(x = jobsOfType$timeDiff)) + geom_histogram(bins = 100) +
+  interarrivalPlot <- ggplot(jobsOfTypeCutoff, aes(x = jobsOfTypeCutoff$timeDiff)) + geom_histogram(bins = 100) +
     ggtitle(paste0("Interarrival times for jobs of type: ", i))
   
   print(interarrivalPlot)
   
   interArrTimes <- rbind(interArrTimes, list(i, mean(jobsOfType$timeDiff), sd(jobsOfType$timeDiff)))
+  
+  ## Create stochastic expression for interarrival time
+  stoEx <- distToStoEx(jobsOfType$timeDiff, cutoffQuantile = 0.95)
+  print(paste0("StoEx for interarrival times of job type: ", i))
+  print(stoEx)
 }
 
 colnames(interArrTimes) <- c("Type", "interArrTime.mean", "interArrTime.sd")
