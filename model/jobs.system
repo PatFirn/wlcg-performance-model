@@ -13,11 +13,47 @@
     <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_Tu4uELdIEeeBdYjWM-V5yw" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_ua4eULJgEee414wI-DE2Cw" assemblyContext_ProvidedDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
       <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_5XuUcLdEEeeBdYjWM-V5yw"/>
     </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_n4CiwBaBEeiVIpFpL6JS_g" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_UjCc8BaBEeiVIpFpL6JS_g" assemblyContext_ProvidedDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
+      <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_Gns_8BaAEeiVIpFpL6JS_g"/>
+    </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_oqy1YBaBEeiVIpFpL6JS_g" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_WE4DIBaBEeiVIpFpL6JS_g" assemblyContext_ProvidedDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
+      <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_ISRrYBaAEeiVIpFpL6JS_g"/>
+    </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_phS_kBaBEeiVIpFpL6JS_g" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_YGG7EBaBEeiVIpFpL6JS_g" assemblyContext_ProvidedDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
+      <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_Hc2fQBaAEeiVIpFpL6JS_g"/>
+    </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_0VIVkBaBEeiVIpFpL6JS_g" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_ZaR4sBaBEeiVIpFpL6JS_g" assemblyContext_ProvidedDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
+      <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_Ds-UMBaAEeiVIpFpL6JS_g"/>
+    </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_0-RZMBaBEeiVIpFpL6JS_g" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_bg61EBaBEeiVIpFpL6JS_g" assemblyContext_ProvidedDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
+      <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_FmzjoBaAEeiVIpFpL6JS_g"/>
+    </connectors__ComposedStructure>
+    <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_1s2WcBaBEeiVIpFpL6JS_g" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_adOjcBaBEeiVIpFpL6JS_g" assemblyContext_ProvidedDelegationConnector="_SmMAoLdIEeeBdYjWM-V5yw">
+      <innerProvidedRole_ProvidedDelegationConnector href="jobs.repository#_Eki1YBaAEeiVIpFpL6JS_g"/>
+    </connectors__ComposedStructure>
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_TgOgoLJeEee414wI-DE2Cw" entityName="IOJob">
       <providedInterface__OperationProvidedRole href="jobs.repository#_SpNSsLJWEeeDotutARlDZw"/>
     </providedRoles_InterfaceProvidingEntity>
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ua4eULJgEee414wI-DE2Cw" entityName="ComputeJob">
       <providedInterface__OperationProvidedRole href="jobs.repository#_SpNSsLJWEeeDotutARlDZw"/>
+    </providedRoles_InterfaceProvidingEntity>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_UjCc8BaBEeiVIpFpL6JS_g" entityName="analysis">
+      <providedInterface__OperationProvidedRole href="jobs.repository#_HbbqUBZ9EeiVIpFpL6JS_g"/>
+    </providedRoles_InterfaceProvidingEntity>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_WE4DIBaBEeiVIpFpL6JS_g" entityName="production">
+      <providedInterface__OperationProvidedRole href="jobs.repository#_vWdjgBZ-EeiVIpFpL6JS_g"/>
+    </providedRoles_InterfaceProvidingEntity>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_YGG7EBaBEeiVIpFpL6JS_g" entityName="reprocessing">
+      <providedInterface__OperationProvidedRole href="jobs.repository#_iIkl4BZ-EeiVIpFpL6JS_g"/>
+    </providedRoles_InterfaceProvidingEntity>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ZaR4sBaBEeiVIpFpL6JS_g" entityName="hcxrood">
+      <providedInterface__OperationProvidedRole href="jobs.repository#_zIN94BZ-EeiVIpFpL6JS_g"/>
+    </providedRoles_InterfaceProvidingEntity>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_adOjcBaBEeiVIpFpL6JS_g" entityName="hctest">
+      <providedInterface__OperationProvidedRole href="jobs.repository#_wBN7QBZ_EeiVIpFpL6JS_g"/>
+    </providedRoles_InterfaceProvidingEntity>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_bg61EBaBEeiVIpFpL6JS_g" entityName="relval">
+      <providedInterface__OperationProvidedRole href="jobs.repository#_wyUBABZ_EeiVIpFpL6JS_g"/>
     </providedRoles_InterfaceProvidingEntity>
   </system:System>
   <emfprofileapplication:ProfileApplication>

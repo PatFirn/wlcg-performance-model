@@ -13,4 +13,17 @@
       <interArrivalTime_OpenWorkload specification="21"/>
     </workload_UsageScenario>
   </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_UZ4ZkBaEEeiVIpFpL6JS_g" entityName="Reprocessing">
+    <scenarioBehaviour_UsageScenario id="_st9ogBaEEeiVIpFpL6JS_g" entityName="ScenarioBehaviour">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_st9ogRaEEeiVIpFpL6JS_g" successor="_vueMIBaEEeiVIpFpL6JS_g"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_st9oghaEEeiVIpFpL6JS_g" predecessor="_vueMIBaEEeiVIpFpL6JS_g"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_vueMIBaEEeiVIpFpL6JS_g" entityName="EntryLevelSystemCall1" successor="_st9oghaEEeiVIpFpL6JS_g" predecessor="_st9ogRaEEeiVIpFpL6JS_g">
+        <providedRole_EntryLevelSystemCall href="jobs.system#_YGG7EBaBEeiVIpFpL6JS_g"/>
+        <operationSignature__EntryLevelSystemCall href="jobs.repository#_AN89sBaCEeiVIpFpL6JS_g"/>
+      </actions_ScenarioBehaviour>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:OpenWorkload">
+      <interArrivalTime_OpenWorkload specification="DoublePDF[(2.0; 0.45882629)(3.0; 0.03523314)(5.0; 0.04890608)(6.0; 0.01780915)(8.0; 0.02900371)(9.0; 0.01284402)(11.0; 0.02340224)(12.0; 0.0107508)(13.0; 0.01024842)(15.0; 0.01740725)(16.0; 0.00844825)(18.0; 0.01540613)(19.0; 0.00698299)(21.0; 0.01260958)(22.0; 0.0062713)(24.0; 0.01132015)(25.0; 0.0049735)(26.0; 0.00530004)(28.0; 0.01086802)(29.0; 0.00473906)(31.0; 0.00905947)(32.0; 0.00443763)(34.0; 0.00835615)(35.0; 0.00371757)(36.0; 0.00384316)(38.0; 0.00717557)(39.0; 0.00359197)(41.0; 0.00658947)(42.0; 0.00328217)(44.0; 0.00626293)(45.0; 0.00294726)(47.0; 0.00616245)(48.0; 0.00265421)(49.0; 0.00288865)(51.0; 0.00556798)(52.0; 0.00242814)(54.0; 0.00511584)(55.0; 0.00240302)(57.0; 0.00465533)(58.0; 0.00247)(60.0; 0.0046637)(61.0; 0.00195088)(62.0; 0.0021016)(64.0; 0.00401899)(65.0; 0.00198438)(67.0; 0.00390177)(68.0; 0.00220207)(70.0; 0.00334916)(71.0; 0.00184204)(72.0; 0.00171644)(74.0; 0.00323194)(75.0; 0.00149038)(77.0; 0.00319007)(78.0; 0.00174156)(80.0; 0.00303099)(81.0; 0.0016076)(83.0; 0.00319007)(84.0; 0.00147363)(85.0; 0.00124756)(87.0; 0.00290539)(88.0; 0.0013899)(90.0; 0.00261234)(91.0; 0.00115546)(93.0; 0.00284678)(94.0; 0.00150712)(96.0; 0.00252024)(97.0; 0.00121407)(98.0; 0.0013899)(100.0; 0.00272956)(101.0; 0.00094614)(103.0; 0.00212672)(104.0; 0.00103824)(106.0; 0.00216858)(107.0; 0.00103824)(108.0; 0.00115546)(110.0; 0.0017918)(111.0; 0.0008959)(113.0; 0.00199275)(114.0; 0.000988)(116.0; 0.00200949)(117.0; 0.00083729)(119.0; 0.00169132)(120.0; 0.000988)(121.0; 0.00091265)(123.0; 0.00159085)(124.0; 0.00082892)(126.0; 0.00171644)(127.0; 0.00087915)(129.0; 0.00149038)(130.0; 0.00069495)(132.0; 0.00136478)(133.0; 0.00069495)(134.0; 0.00085404)(136.0; 0.00144014)(137.0; 0.00059448)(139.0; 0.00137315)(140.0; 0.00077031)(142.0; 0.0011136)(143.0; 0.00065309)(144.0; 0.00053587)(393.0; 0.04965964)]"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
 </usagemodel:UsageModel>
