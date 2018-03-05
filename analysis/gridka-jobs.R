@@ -105,8 +105,14 @@ WCTimeAccuracy <- jobData$computedWCTime / 1000.0 - jobData$WrapWC
 
 # Todo What do we do with those entries not matching the computed wall time?
 # Enough to filter them out of the data completely?
+
+pdf(file = "plots/histogram_timestampAccuracy.pdf")
 WCTimeAccuracyTrunc <- subset(WCTimeAccuracy, WCTimeAccuracy <= 10 & WCTimeAccuracy >= -10)
-hist(WCTimeAccuracyTrunc)
+hist(WCTimeAccuracyTrunc, main = "Timestamps vs. Walltime Comparison (distribution truncated)", 
+     xlab = "Timestamp Diff. - Walltime",
+     ylab = "Number of Jobs")
+dev.off()
+
 quantile(WCTimeAccuracy, c(0.02, 0.98))
 
 
@@ -131,54 +137,89 @@ jobData$estimatedIOTime <- jobData$WrapWC - jobData$WrapCPU / jobData$NCores
 jobCountPerType <- as.data.frame(table(jobData$Type))
 colnames(jobCountPerType) <- c("Type", "Count")
 
+pdf(file = "plots/pie_jobTypeCount.pdf")
+
 pieChart <- ggplot(jobCountPerType, aes(x = "", y = Count, fill = Type)) + 
   geom_bar(width = 1, stat = "identity") +
-  coord_polar("y", start = 0)
+  coord_polar("y", start = 0) +
+  labs(title = "Job Number per Type", x = "", y = "")
 
 pieChart
 
+dev.off()
+
+
+pdf(file = "plots/pie_jobTypeCPUDemand.pdf")
+
+jobDemandPerType <- aggregate(jobData$CPUDemand, by = list(Type = jobData$Type), FUN = sum, na.rm = TRUE)
+
+pieChartDemands <- ggplot(jobDemandPerType, aes(x = "", y = x, fill = Type)) + 
+  geom_bar(width = 1, stat = "identity") +
+  coord_polar("y", start = 0) +
+  labs(title = "Total CPU Demand per Type", x = "", y = "")
+
+pieChartDemands
+
+dev.off()
+
 for(i in levels(jobData$Type)) {
+  pdf(file = paste("plots/histogram_CPUTime_", i, ".pdf", sep=""))
+  
   jobsOfType <- subset(jobData, Type == i)
   jobPlot <- ggplot(jobsOfType, aes(x = WrapCPU)) + geom_histogram(bins = 100)
   
-  jobPlot <- jobPlot + ggtitle(paste0("CPU Time (added for cores) for jobs of type: ", i))
+  jobPlot <- jobPlot + ggtitle(paste0("CPU Time (added for cores) for jobs of type: ", i)) +
+    labs(x = "Job CPU Time (WrapCPU)")
   
   print(jobPlot)
+  
+  dev.off()
 }
 
 for(i in levels(jobData$Type)) {
+  pdf(file = paste("plots/histogram_CPUDemand_", i, ".pdf", sep=""))
+  
   jobsOfType <- subset(jobData, Type == i)
   jobPlot <- ggplot(jobsOfType, aes(x = CPUDemand)) + geom_histogram(bins = 100)
   
-  jobPlot <- jobPlot + ggtitle(paste0("CPU demand (synthetic, assumes high load) for jobs of type: ", i))
+  jobPlot <- jobPlot + ggtitle(paste0("CPU demand (synthetic, assumes high load) for jobs of type: ", i)) +
+    labs(x = "CPU Demand (CPU Time Scaled by HepSPEC result)")
   
   print(jobPlot)
+  dev.off()
   
   ## Create stochastic expression for interarrival time
   stoEx <- distToStoEx(jobsOfType$CPUDemand)
   print(paste0("StoEx for CPUDemand of job type: ", i))
   print(stoEx)
-  
 }
 
 
 # Overview over CPU usage of all job types
+pdf(file = "plots/histogram_CPUTimeAll.pdf")
+
 (allJobTypes <- ggplot(jobData, aes(x = WrapCPU)) + geom_histogram(bins = 100) +
   facet_wrap(~Type, ncol = 4))
 
+dev.off()
+
+
 ## CPU usage and I/O estimate
 # Created plots are very complex, so do not generate these as pdf or inside of an IDE
-# png(file = "plots/plot_png%03d_generated.png", width = 1600, height = 1000, res = 144)
-# 
-# for(i in levels(jobData$Type)) {
-#   jobsOfType <- subset(jobData, Type == i)
-#   (plotCPUIO <- ggplot(jobsOfType, aes(x = CPUDemand, y = estimatedIOTime)) + geom_point(alpha = 1/2) +
-#      facet_wrap(~Type, ncol = 4))
-#   print(plotCPUIO)
-# 
-# }
-# 
-# dev.off()
+
+for(i in levels(jobData$Type)) {
+  png(file = paste("plots/scatter_CPUDemand_estIOTime_", i, ".png", sep = ""),
+      width = 1600,
+      height = 1000,
+      res = 144)
+  
+  jobsOfType <- subset(jobData, Type == i)
+  (plotCPUIO <- ggplot(jobsOfType, aes(x = WrapCPU, y = estimatedIOTime)) + geom_point(alpha = 1/2) +
+     facet_wrap(~Type, ncol = 4) + labs(title = "Total CPU Time vs. Estimated I/O Time"))
+  print(plotCPUIO)
+  
+  dev.off()
+}
 
 ## Job Summary
 
@@ -206,8 +247,10 @@ dailyJobs <- aggregate(jobData$StartedRunningDatetime, by=
                        FUN=length)
 colnames(dailyJobs) <- c("date", "type", "count")
 
+pdf(file = "plots/bar_jobsPerDay.pdf")
 ggplot(dailyJobs, aes(x = date, y = count, fill = type)) + geom_bar(stat = "identity") +
   ggtitle("Number of Started Jobs per Day")
+dev.off()
 
 ## Calculate interarrival times for each type of job
 
@@ -227,12 +270,22 @@ for(i in levels(jobData$Type)) {
   jobsOfTypeCutoff <- subset(jobsOfType,
     jobsOfType$timeDiff < as.numeric(quantile(jobsOfType$timeDiff, c(0.95), na.rm = TRUE)))
 
-  interarrivalPlot <- ggplot(jobsOfTypeCutoff, aes(x = jobsOfTypeCutoff$timeDiff)) + geom_histogram(bins = 100) +
-    ggtitle(paste0("Interarrival times for jobs of type: ", i))
+  pdf(file = paste("plots/histogram_interarrivalTimes_", i, ".pdf", sep = ""))
+  
+  cutoffQuantile <- quantile(jobsOfType$timeDiff, c(0.95), na.rm = TRUE)[[1]]
+  binWidth <- ceiling(cutoffQuantile / 80); 
+  
+  
+  interarrivalPlot <- ggplot(jobsOfTypeCutoff, aes(x = jobsOfTypeCutoff$timeDiff)) +
+    geom_histogram(binwidth = binWidth) +
+    ggtitle(paste0("Interarrival times for jobs of type: ", i)) +
+    labs(x = "Interarrival Time / s")
   
   print(interarrivalPlot)
   
-  interArrTimes <- rbind(interArrTimes, list(i, mean(jobsOfType$timeDiff), sd(jobsOfType$timeDiff)))
+  dev.off()
+  
+  interArrTimes <- rbind(interArrTimes, list(i, mean(jobsOfType$timeDiff, na.rm = TRUE), sd(jobsOfType$timeDiff, na.rm = TRUE)))
   
   ## Create stochastic expression for interarrival time
   stoEx <- distToStoEx(jobsOfType$timeDiff, cutoffQuantile = 0.95)
@@ -247,6 +300,3 @@ interArrTimes
 # Create a time series for the following analyses
 # reprocessingJobs <- subset(jobData, Type == "reprocessing")
 # timeSeries <- xts(reprocessingJobs, reprocessingJobs$StartedRunningDatetime)
-
-# dev.off()
-
