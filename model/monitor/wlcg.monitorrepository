@@ -28,4 +28,11 @@
     </measurementSpecifications>
     <measuringPoint xsi:type="pcmmeasuringpoint:ResourceEnvironmentMeasuringPoint" href="My.measuringpoint#//@measuringPoints.3"/>
   </monitors>
+  <monitors id="_cVb70CEBEeiL7NoA-Rej6Q" entityName="Response Time ">
+    <measurementSpecifications id="_ep3ckCEBEeiL7NoA-Rej6Q">
+      <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_6rYmYs7nEeOX_4BzImuHbA"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_fLzE8CEBEeiL7NoA-Rej6Q"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" href="My.measuringpoint#//@measuringPoints.4"/>
+  </monitors>
 </monitorrepository:MonitorRepository>
