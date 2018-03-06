@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.palladiosimulator.edp2.models:MeasuringPointRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.palladiosimulator.edp2.models="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0" xmlns:pcmmeasuringpoint="http://palladiosimulator.org/PCM/MeasuringPoint/1.0" id="_0hIiULcrEeeBdYjWM-V5yw">
-  <measuringPoints xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" stringRepresentation="Usage Scenario: UsageScenario" resourceURIRepresentation="platform:/resource/wlcg-model/wlcg.usagemodel#_OCOm4LJeEee414wI-DE2Cw">
-    <usageScenario href="../wlcg.usagemodel#_OCOm4LJeEee414wI-DE2Cw"/>
+  <measuringPoints xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" stringRepresentation="Usage Scenario: Reprocessing" resourceURIRepresentation="platform:/resource/wlcg-model/wlcg.usagemodel#_UZ4ZkBaEEeiVIpFpL6JS_g">
+    <usageScenario href="../wlcg.usagemodel#_UZ4ZkBaEEeiVIpFpL6JS_g"/>
   </measuringPoints>
   <measuringPoints xsi:type="pcmmeasuringpoint:ActiveResourceMeasuringPoint" stringRepresentation="HDD [0] in gridka_working_node" resourceURIRepresentation="platform:/resource/wlcg-model/node.resourceenvironment#_yycOELJYEee0UMKu8yyP2A">
     <activeResource href="../node.resourceenvironment#_yycOELJYEee0UMKu8yyP2A"/>
@@ -11,5 +11,8 @@
   </measuringPoints>
   <measuringPoints xsi:type="pcmmeasuringpoint:ResourceEnvironmentMeasuringPoint" stringRepresentation="Resource Environment: New ResourceEnvironment" resourceURIRepresentation="platform:/resource/wlcg-model/node.resourceenvironment#/0">
     <resourceEnvironment href="../node.resourceenvironment#/0"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" stringRepresentation="Usage Scenario: Production" resourceURIRepresentation="platform:/resource/wlcg-model/wlcg.usagemodel#_G3zZoB2gEei8jrU71fTbmA">
+    <usageScenario href="../wlcg.usagemodel#_G3zZoB2gEei8jrU71fTbmA"/>
   </measuringPoints>
 </org.palladiosimulator.edp2.models:MeasuringPointRepository>
