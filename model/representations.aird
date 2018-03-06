@@ -10508,7 +10508,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_OM0sUBaCEeiVIpFpL6JS_g" name="DoublePDF[(11297.0; 0.14729962)(22593.0; ...">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_OM0sUBaCEeiVIpFpL6JS_g" name="DoublePDF[(11297.0; 0.14651784)(22593.0; ...">
           <target xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <semanticElements xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_OM16cBaCEeiVIpFpL6JS_g" labelPosition="node">
@@ -10718,7 +10718,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_nJGjsBaCEeiVIpFpL6JS_g" name="DoublePDF[(11399.0; 0.29126751)(22797.0; ...">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_nJGjsBaCEeiVIpFpL6JS_g" name="DoublePDF[(91186.0; 0.33584773)(182372.0 ...">
           <target xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.7/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <semanticElements xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.7/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_nJHKwBaCEeiVIpFpL6JS_g" labelPosition="node">
@@ -10925,7 +10925,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_NLsKABaDEeiVIpFpL6JS_g" name="DoublePDF[(5071.0; 0.1380998)(10141.0; 0 ...">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_NLsKABaDEeiVIpFpL6JS_g" name="DoublePDF[(12204.0; 0.23119481)(24408.0; ...">
           <target xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.8/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <semanticElements xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.8/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_NLsKARaDEeiVIpFpL6JS_g" labelPosition="node">
@@ -11554,7 +11554,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='InternalAction']/@subContainerMappings[name='ResourceDemand%20Container']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9J7hIBaDEeiVIpFpL6JS_g" name="DoublePDF[(3647.0; 0.47616099)(7294.0; 0 ...">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9J7hIBaDEeiVIpFpL6JS_g" name="DoublePDF[(14588.0; 0.46718266)(29175.0; ...">
           <target xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.11/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <semanticElements xmi:type="seff_performance:ParametricResourceDemand" href="jobs.repository#//@components__Repository.11/@serviceEffectSpecifications__BasicComponent.0/@steps_Behaviour.2/@resourceDemand_Action.0"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_9J8IMBaDEeiVIpFpL6JS_g" labelPosition="node">
