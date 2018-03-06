@@ -122,7 +122,7 @@ quantile(WCTimeAccuracy, c(0.02, 0.98))
 jobData$CPUTimePerCore <- jobData$WrapCPU / jobData$NCores
 
 # Scale with HepSPEC06 result
-jobData$CPUDemand <- jobData$CPUTimePerCore * jobData$HSScorePerJobSlot
+jobData$CPUDemand <- jobData$WrapCPU * jobData$HSScorePerJobSlot
 
 
 ## Find estimate for I/O time
